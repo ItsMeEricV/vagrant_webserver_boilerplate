@@ -1,0 +1,17 @@
+#very basic nginx configuration
+
+server {
+  listen   80;
+  server_name  192.168.60.100;
+  sendfile off;
+
+  root /srv/website;
+ 
+  access_log  <%= node['nginx']['log_dir'] %>/access.log;
+  error_log  <%= node['nginx']['log_dir'] %>/error.log;
+
+  location /  {
+    try_files $uri $uri/ /index.html;
+  }
+
+}
