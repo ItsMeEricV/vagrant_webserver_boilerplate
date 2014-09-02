@@ -20,3 +20,17 @@ Instructions
     - Website root: the `code` folder is synced to the VM as the website root
     - Chef configuration: Uses chef-solo to provision the VM
 1. (Optional) - Modify the nginx webserver configuration. The `webserver.erb` file located at `vagrant_webserver_boilerplate/cookbooks/webserver-config/templates/default/webserver.erb` contains the nginx configuration
+1. Run `vagrant up`. 
+1. Open a web browser and navigate to 192.168.60.100. You should see a "Hello, Vagrant!" message if all went well.
+1. If you make any changes to the configuration after running `vagrant up` then run `vagrant provision`
+
+
+Continuing Development
+--------------------
+1. Begin editing the code in the _code_ folder
+1. Read up on [Vagrant documentation](https://docs.vagrantup.com/v2/) to learn more Vagrant commands
+
+
+Tested On
+-----------------
+- Mac OS 10.9.4, Vagrant 1.6.2, Berkshelf 3.1.5, vagrant-berkshelf 2.0.1
